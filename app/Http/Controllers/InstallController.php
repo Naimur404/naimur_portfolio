@@ -132,7 +132,7 @@ class InstallController extends Controller
     public function verify_purchase(Request $request)
     {
         try {
-              $this->verify($request->purchase_code, $request->username);
+            //   $this->verify($request->purchase_code, $request->username);
             return redirect('step3');
         } catch (\Exception $exception){
             return back()->with('error', $exception->getMessage())->withInput();
